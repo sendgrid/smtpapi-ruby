@@ -152,6 +152,14 @@ lt3       = Time.local(2015,  9,  1,  4,  5,  6)
 header.set_send_each_at([lt1, lt2, lt3])
 ```
 
+### set_batch_id
+
+```ruby
+header    = Smtpapi::Header.new
+batch_id = "MWQxZmIyODYtNjE1Ni0xMWU1LWI3ZTUtMDgwMDI3OGJkMmY2LWEzMmViMjYxMw"
+header.set_batch_id(batch_id)
+```
+
 ### asm_group_id
 
 This is to specify an [ASM Group](https://sendgrid.com/docs/User_Guide/advanced_suppression_manager.html) for the message.

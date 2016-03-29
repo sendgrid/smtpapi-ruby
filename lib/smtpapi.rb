@@ -9,7 +9,7 @@ module Smtpapi
   #
   class Header
     attr_reader :to, :sub, :section, :category, :unique_args, :filters
-    attr_reader :send_at, :send_each_at, :asm_group_id, :ip_pool
+    attr_reader :send_at, :send_each_at, :batch_id, :asm_group_id, :ip_pool
 
     def initialize
       @to = []
@@ -19,6 +19,7 @@ module Smtpapi
       @unique_args = {}
       @filters = {}
       @send_at = nil
+      @batch_id = nil
       @send_each_at = []
       @asm_group_id = nil
       @ip_pool = nil
@@ -104,6 +105,11 @@ module Smtpapi
       self
     end
 
+    def set_batch_id(batch_id)
+      @batch_id = batch_id
+      self
+    end
+
     def set_asm_group(group_id)
       @asm_group_id = group_id
       self
@@ -123,6 +129,7 @@ module Smtpapi
       data['category'] = @category if @category.length > 0
       data['filters'] = @filters if @filters.length > 0
       data['send_at'] = @send_at.to_i unless @send_at.nil?
+      data['batch_id'] = @batch_id unless @batch_id.nil?
       data['asm_group_id'] = @asm_group_id.to_i unless @asm_group_id.nil?
       data['ip_pool'] = @ip_pool unless @ip_pool.nil?
       str_each_at = []

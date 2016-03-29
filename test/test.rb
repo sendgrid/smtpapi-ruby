@@ -188,6 +188,14 @@ class SmtpapiTest < Test::Unit::TestCase
     )
   end
 
+  def test_batch_id
+    header = Smtpapi::Header.new
+    batch_id = "MWQxZmIyODYtNjE1Ni0xMWU1LWI3ZTUtMDgwMDI3OGJkMmY2LWEzMmViMjYxMw"
+    header.set_batch_id(batch_id)
+
+    assert_equal("{\"batch_id\":\"#{batch_id}\"}", header.json_string)
+  end
+
   def test_asm_group_id
     header = Smtpapi::Header.new
     header.set_asm_group(2)
