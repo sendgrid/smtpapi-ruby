@@ -63,7 +63,7 @@ header.add_substitution('other', ['one', 'two'])   # sub = {keep: ['secret'], ot
 
 ```ruby
 header    = Smtpapi::Header.new
-header.set_substitutions({'keep' => 'secret'})  # sub = {keep: ['secret']}
+header.set_substitutions({'keep' => ['secret']})  # sub = {keep: ['secret']}
 ```
 
 ### add_unique_arg
