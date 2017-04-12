@@ -195,6 +195,21 @@ class SmtpapiTest < Test::Unit::TestCase
     assert_equal('{"asm_group_id":2}', header.json_string)
   end
 
+  def test_add_asm_groups_to_display
+    header = Smtpapi::Header.new
+    header.add_asm_groups_to_display(1)
+    header.add_asm_groups_to_display(2)
+
+    assert_equal('{"asm_groups_to_display":[1,2]}', header.json_string)
+  end
+
+  def test_set_asm_groups_to_display
+    header = Smtpapi::Header.new
+    header.set_asm_groups_to_display([1, 2])
+
+    assert_equal('{"asm_groups_to_display":[1,2]}', header.json_string)
+  end
+
   def test_ip_pool
     header = Smtpapi::Header.new
     header.set_ip_pool('test_pool')

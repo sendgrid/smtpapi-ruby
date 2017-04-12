@@ -14,7 +14,7 @@ ParameterLists:
 
 # Increase the max AbcSize
 AbcSize:
-  Max: 34
+  Max: 37
 
 # Increase max number of "/" in %r
 RegexpLiteral:
@@ -26,7 +26,7 @@ ClassLength:
   CountComments: true
 
 CyclomaticComplexity:
-  Max: 11
+  Max: 12
 
 PerceivedComplexity:
-  Max: 11
+  Max: 12
