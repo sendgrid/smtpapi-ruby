@@ -115,22 +115,20 @@ module Smtpapi
     end
 
     def to_array
-      data = {}
-      data['to'] = @to if @to.length > 0
-      data['sub'] = @sub if @sub.length > 0
-      data['section'] = @section if @section.length > 0
-      data['unique_args'] = @unique_args if @unique_args.length > 0
-      data['category'] = @category if @category.length > 0
-      data['filters'] = @filters if @filters.length > 0
-      data['send_at'] = @send_at.to_i unless @send_at.nil?
-      data['asm_group_id'] = @asm_group_id.to_i unless @asm_group_id.nil?
-      data['ip_pool'] = @ip_pool unless @ip_pool.nil?
-      str_each_at = []
-      @send_each_at.each do |val|
-        str_each_at.push(val.to_i)
+      {}.tap do |data|
+        data['to'] = to if to.any?
+        data['sub'] = sub if sub.any?
+        data['section'] = section if section.any?
+        data['unique_args'] = unique_args if unique_args.any?
+        data['category'] = category if category.any?
+        data['filters'] = filters if filters.any?
+        data['send_at'] = send_at.to_i if send_at
+        data['asm_group_id'] = asm_group_id.to_i if asm_group_id
+        data['ip_pool'] = ip_pool if ip_pool
+
+        str_each_at = send_each_at.map(&:to_i)
+        data['send_each_at'] = str_each_at if str_each_at.any?
       end
-      data['send_each_at'] = str_each_at if str_each_at.length > 0
-      data
     end
 
     protected :to_array
