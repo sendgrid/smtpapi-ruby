@@ -1,4 +1,4 @@
-# How To Contribute to smptapi-ruby for first-timers
+# How To Contribute to smtpapi-ruby for first-timers
 
 We know that contributing to an open source project for the first time can be intimidating. 
 
@@ -8,7 +8,7 @@ Assuming you already have a [Github account](https://github.com/join), here are 
 
 ## Finding a task you can handle
 
-We label our issues according to their difficulty level. You can find easy ones [here](https://github.com/sendgrid/smptpapi-ruby/issues?q=is%3Aopen+is%3Aissue+label%3A%22difficulty%3A+easy%22) but feel free to explore other labels too.
+We label our issues according to their difficulty level. You can find easy ones [here](https://github.com/sendgrid/smtpapi-ruby/issues?q=is%3Aopen+is%3Aissue+label%3A%22difficulty%3A+easy%22) but feel free to explore other labels too.
 
 - [Medium labeled issues](https://github.com/sendgrid/smtpapi-ruby/issues?q=is%3Aopen+is%3Aissue+label%3A%22difficulty%3A+medium%22)
 - [Hard labeled issues](https://github.com/sendgrid/smtpapi-ruby/issues?q=is%3Aopen+is%3Aissue+label%3A%22difficulty%3A+hard%22)
