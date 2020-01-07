@@ -1,17 +1,28 @@
 language: ruby
 rvm:
-  - 2.2
+  - ruby-head
+  - 2.6
+  - 2.5
+  - 2.4
+  - jruby
+
 before_script:
   - bundle install
+
 script:
   - rubocop --fail-level=W
   - rake test
-notifications:
-  hipchat:
-    rooms:
-      secure: DVMCsQCZ8423LAv6S4qd0d//7Rks/YeWhWDFfJNCoJUz2ilYnnZgjrwcwBecEaymW5AcpPrGO7Bu0Kls+S0qnm91drCm7XdDVRm59aY4YTUQ3zyjPO4Ntdd2njP36G3+/LtmRlKaJOLfXWmCkuTG4jBdMOjmvwLagMgRdrcW9Xs=
-    template:
-    - '<a href="https://travis-ci.org/%{repository}/builds/%{build_id}">%{repository}
-      Build %{build_number}</a> on branch <i>%{branch}</i> by %{author}: <strong>%{message}</strong>
-      <a href="https://github.com/%{repository}/commits/%{commit}">View on GitHub</a>'
-    format: html
+
+matrix:
+  allow_failures:
+  - rvm: ruby-head
+  fast_finish: true
+
+deploy:
+  provider: rubygems
+  api_key:
+    secure: CWlfN170i/fHPrIufHHLWQ0utjuhxf4ELSxKeypIuO2CNTqNMzocDAa2vxMt4XfO6d2wFPV/LC+IHR7i+sp7PKvjRoa4BLUUxjfBNDboc0gGESeUYlAxwsJo0tOVCNmpxgjQKqtPLz/19A/v/xpxLv2Im/9Idqa5ATd06sMDdM8=
+  gem: smtpapi-ruby
+  on:
+    tags: true
+    rvm: '2.4'
