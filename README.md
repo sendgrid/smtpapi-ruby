@@ -4,7 +4,7 @@
 [![Gem Version](https://badge.fury.io/rb/smtpapi.svg)](https://badge.fury.io/rb/smtpapi)
 [![Email Notifications Badge](https://dx.sendgrid.com/badge/ruby)](https://dx.sendgrid.com/newsletter/ruby)
 [![Gem Version](https://badge.fury.io/rb/sendgrid-ruby.svg)](https://badge.fury.io/rb/sendgrid-ruby)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 [![Twitter Follow](https://img.shields.io/twitter/follow/sendgrid.svg?style=social&label=Follow)](https://twitter.com/sendgrid)
 [![GitHub contributors](https://img.shields.io/github/contributors/sendgrid/smtpapi-ruby.svg)](https://github.com/sendgrid/smtpapi-ruby/graphs/contributors)
 
@@ -112,4 +112,4 @@ smtpapi-ruby is maintained and funded by SendGrid, Inc. The names and logos for 
 <a name="license"></a>
 # License
 
-[The MIT License (MIT)](LICENSE.txt)
+[The MIT License (MIT)](LICENSE.md)
