@@ -1,18 +1,19 @@
 language: ruby
 rvm:
-- ruby-head
-- 2.6
-- 2.5
-- 2.4
-- jruby
+  - ruby-head
+  - 2.7
+  - 2.6
+  - 2.5
+  - 2.4
+  - jruby
 before_script:
-- bundle install
+  - bundle install
 script:
-- rubocop --fail-level=W
-- rake test
+  - rubocop --fail-level=W
+  - rake test
 matrix:
   allow_failures:
-  - rvm: ruby-head
+    - rvm: ruby-head
   fast_finish: true
 deploy:
   provider: rubygems
