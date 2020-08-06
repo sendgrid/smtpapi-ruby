@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[2020-08-05] Version 0.1.7
+--------------------------
+**Library - Chore**
+- [PR #36](https://github.com/sendgrid/smtpapi-ruby/pull/36): fix CodeClimate suggestions. Thanks to [@valterbarros](https://github.com/valterbarros)!
+
+
 [2020-07-22] Version 0.1.6
 --------------------------
 **Library - Docs**
