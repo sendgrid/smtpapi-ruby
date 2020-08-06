@@ -61,7 +61,7 @@ cd smtpapi-ruby
 
 ##### Execute: #####
 
-See the [examples folder](https://github.com/sendgrid/smtpapi-ruby/tree/HEAD/examples) to get started quickly.
+See the [examples folder](/examples) to get started quickly.
 
 To run the example:
 
@@ -89,9 +89,9 @@ Source code.
 
 All PRs require passing tests before the PR will be reviewed.
 
-All test files are in the [`test`](https://github.com/sendgrid/smtpapi-ruby/tree/HEAD/test) directory.
+All test files are in the [`test`](/test) directory.
 
-For the purposes of contributing to this repo, please update the [`test.rb`](https://github.com/sendgrid/smtpapi-ruby/blob/HEAD/test/test.rb) file with unit tests as you modify the code.
+For the purposes of contributing to this repo, please update the [`test.rb`](/test/test.rb) file with unit tests as you modify the code.
 
 To run the tests:
 
