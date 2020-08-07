@@ -61,7 +61,7 @@ cd smtpapi-ruby
 
 ##### Execute: #####
 
-See the [examples folder](/examples) to get started quickly.
+See the [examples folder](examples) to get started quickly.
 
 To run the example:
 
