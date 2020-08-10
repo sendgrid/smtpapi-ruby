@@ -89,9 +89,9 @@ Source code.
 
 All PRs require passing tests before the PR will be reviewed.
 
-All test files are in the [`test`](/test) directory.
+All test files are in the [`test`](test) directory.
 
-For the purposes of contributing to this repo, please update the [`test.rb`](/test/test.rb) file with unit tests as you modify the code.
+For the purposes of contributing to this repo, please update the [`test.rb`](test/test.rb) file with unit tests as you modify the code.
 
 To run the tests:
 
