@@ -18,7 +18,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'rake'
-  spec.add_development_dependency('rubocop', '>=0.29.0', '<0.30.0')
   spec.add_development_dependency('test-unit', '~> 3.0')
   spec.add_development_dependency('simplecov', '~> 0.18.5')
 end
