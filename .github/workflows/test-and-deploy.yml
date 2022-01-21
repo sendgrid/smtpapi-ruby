@@ -36,7 +36,7 @@ jobs:
         if: ${{ matrix.ruby != '2.4' }}
 
       - name: Run Tests
-        run: rubocop && make test
+        run: bundle exec rubocop && make test
 
   deploy:
     name: Deploy
