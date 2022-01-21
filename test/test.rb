@@ -226,8 +226,8 @@ class SmtpapiTest < Test::Unit::TestCase
     assert(File.file?('./.gitignore'))
   end
 
-  def test_travis_exists
-    assert(File.file?('./.travis.yml'))
+  def test_github_actions_exists
+    assert(File.file?('./.github/workflows/test-and-deploy.yml'))
   end
 
   def test_codeclimate_exists
