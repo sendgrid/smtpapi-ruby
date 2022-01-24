@@ -30,5 +30,56 @@ PerceivedComplexity:
 Metrics/LineLength:
   Max: 100
 
-GemSpec/RequiredRubyVersion:
-  Exclude: 'smtpapi.gemspec'
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: TreatCommentsAsGroupSeparators, ConsiderPunctuation, Include.
+# Include: **/*.gemspec
+Gemspec/OrderedDependencies:
+  Exclude:
+    - 'smtpapi.gemspec'
+
+# Offense count: 1
+# Configuration parameters: Include.
+# Include: **/*.gemspec
+Gemspec/RequiredRubyVersion:
+  Exclude:
+    - 'smtpapi.gemspec'
+
+# Offense count: 2
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: separated, grouped
+Style/AccessorGrouping:
+  Exclude:
+    - 'lib/smtpapi.rb'
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: prefer_alias, prefer_alias_method
+Style/Alias:
+  Exclude:
+    - 'lib/smtpapi.rb'
+
+# Offense count: 8
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: always, always_true, never
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'examples/example.rb'
+    - 'lib/smtpapi.rb'
+    - 'lib/smtpapi/version.rb'
+    - 'smtpapi.gemspec'
+    - 'test/test.rb'
+    - 'test/test_helper.rb'
+
+# Offense count: 3
+# Cop supports --auto-correct.
+# Configuration parameters: PreferredDelimiters.
+Style/PercentLiteralDelimiters:
+  Exclude:
+    - 'examples/example.rb'
+    - 'test/test.rb'
