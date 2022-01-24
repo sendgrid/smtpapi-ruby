@@ -21,7 +21,7 @@ jobs:
       - name: Checkout smtpapi-ruby
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -38,8 +38,12 @@ jobs:
       - run: bundle install --with development
       - run: bundle exec rake install
 
-      - name: Run Tests
-        run: bundle exec rubocop && make test
+      - name: Run linter
+        run: bundle exec rubocop -a
+        if: ${{ matrix.ruby != '2.4' }}
+
+      - name: Run tests
+        run: make test
 
   deploy:
     name: Deploy

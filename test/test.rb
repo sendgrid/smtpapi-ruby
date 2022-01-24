@@ -230,10 +230,6 @@ class SmtpapiTest < Test::Unit::TestCase
     assert(File.file?('./.github/workflows/test-and-deploy.yml'))
   end
 
-  def test_codeclimate_exists
-    assert(File.file?('./.codeclimate.yml'))
-  end
-
   def test_changelog_exists
     assert(File.file?('./CHANGELOG.md'))
   end

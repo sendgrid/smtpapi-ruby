@@ -22,10 +22,10 @@ ClassLength:
   CountComments: true
 
 CyclomaticComplexity:
-  Max: 11
+  Max: 12
 
 PerceivedComplexity:
-  Max: 11
+  Max: 12
 
 Metrics/LineLength:
   Max: 100
