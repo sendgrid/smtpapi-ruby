@@ -29,3 +29,6 @@ PerceivedComplexity:
 
 Metrics/LineLength:
   Max: 100
+
+GemSpec/RequiredRubyVersion:
+  Exclude: 'smtpapi.gemspec'
